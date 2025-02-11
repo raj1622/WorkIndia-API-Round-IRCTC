@@ -71,9 +71,11 @@ localhost:3000/user/login
 Request Body :
 
 {
+
     "emailId" : "rohan1622@gmail.com",
-    
+
     "password" : "Rohan@123"
+    
 }
 
 
