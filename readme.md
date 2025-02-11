@@ -24,6 +24,68 @@ Backend: Node.js, Express.js
 
 Database: MYSQL
 
+
+Prerequisites:
+
+Ensure you have the following installed
+
+1. NodeJS
+
+2. MYSQL
+
+3. Visual Studio Code
+
+Installation Steps:
+
+1. Clone the repository
+
+https://github.com/raj1622/WorkIndia-API-Round-IRCTC.git
+
+copy above link -> Go to vs code -> navigate to source control section in left menu -> click clone repository and paste the above url -> select the folder where you want to clone it -> open the folder in your local machine
+
+2. Install dependencies
+
+open terminal in vs code and navigate to root of project -> type  npm install 
+
+3. Configure database
+
+Navigate to IRCTC_BOOKING -> src -> config -> database.js
+
+In connectDB() function , while creating a MYSQL Connection, replace the "user" and "password" with yours. as well as while creating mysql pool in same file.
+
+4. Start the server
+
+in terminal type, 
+
+npm run dev
+
+to start the server. Server will be running at PORT 3000
+
+5. Test the API's
+
+Use postman to test API's
+eg:
+
+localhost:3000/user/login
+
+Request Body :
+
+{
+    "emailId" : "rohan1622@gmail.com",
+    
+    "password" : "Rohan@123"
+}
+
+
+
+
+
+
+
+
+
+
+
 API Endpoints:
 
 
@@ -171,7 +233,7 @@ GET /user/getSeatAvailability/:source/:destination
 Request Body:
 
 {
-    
+
 }
 
 
