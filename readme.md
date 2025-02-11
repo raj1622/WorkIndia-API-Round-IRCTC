@@ -26,6 +26,12 @@ Database: MYSQL
 
 API Endpoints:
 
+
+
+#ADMIN API's
+
+
+
 POST /admin/signup
 
 Request Body:
@@ -39,19 +45,133 @@ Request Body:
     "password" : "Aryan@123",
 
     "adminKey" : "ADMIN12345"   // ALL ADMIN ROUTES ARE PROTECTED, USE "ADMIN12345" only to get access as admin
+
+}
+
+
+
+POST /admin/login
+
+Request Body:
+
+{
+
+    "emailId" : "aryanraj1622@gmail.com",
+
+    "password" : "Aryan@123",
+
+    "adminKey" : "ADMIN12345"   // ALL ADMIN ROUTES ARE PROTECTED, USE "ADMIN12345" only to get access as admin
     
 }
 
 
-POST /admin/login
+
+POST /admin/logout
+
 Request Body:
+
 {
-    "emailId" :"aryanraj1622@gmail.com",
-    "password" "Aryan@123",
-    "adminKey" :"ADMIN12345"  // ALL ADMIN ROUTES ARE PROTECTED, USE "ADMIN12345" only to get access as admin
+
 }
 
 
 
+POST /admin/addTrain
+
+Request Body:
+
+{
+
+    "trainId" : 12765,
+
+    "source" : "New Delhi",
+
+    "destination" : "Mumbai",
+
+    "seats" : 175
+    
+}
+
+
+
+#USER API's
+
+
+
+POST /user/signup
+
+Request Body:
+
+{
+
+    "name" : "Rohan Sharma",
+
+    "emailId" : "rohan1622@gmail.com",
+
+    "password" : "Rohan@123",
+
+}
+
+
+
+POST /user/login
+
+Request Body:
+
+{
+
+    "emailId" : "aryanraj1622@gmail.com",
+
+    "password" : "Aryan@123",
+
+}
+
+
+
+POST /user/logout
+
+Request Body:
+
+{
+
+}
+
+
+
+POST /user/book
+
+Request Body:
+
+{
+
+    "trainId" : 12765,
+
+    "source" : "New Delhi",
+
+    "destination" : "Mumbai",
+
+    "seats" : 5
+
+}
+
+
+
+GET /user/getBookings
+
+Request Body:
+
+{
+
+}
+
+
+
+GET /user/getSeatAvailability/:source/:destination
+
+Request Body:
+
+{
+    
+}
 
 
